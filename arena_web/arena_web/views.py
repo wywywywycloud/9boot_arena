@@ -7,7 +7,11 @@ def arena_view(request):
     persons = create_random_persons()
     equip_persons(persons, things)
 
-    battle_log = []
+    battle_log = ["Участники боя:"]
+    for person in persons:
+        battle_log.append(person.name)
+    battle_log.append("")
+    
     def custom_print(*args, **kwargs):
         message = " ".join(map(str, args))
         battle_log.append(message)

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,7 +34,11 @@
         <h1>Arena Battle</h1>
         <div class="battle-log">
             {% for line in battle_log %}
-                <p>{{ line }}</p>
+                {% if line == "" %}
+                    <br>
+                {% else %}
+                    <p>{{ line }}</p>
+                {% endif %}
             {% endfor %}
         </div>
     </div>
