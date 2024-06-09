@@ -1,5 +1,10 @@
 import random
-from module import *
+from .game_classes import *
+
+
+name_list = [
+    'Name 1', 'Name 2', 'Name 1', 'Name 2', 'Name 1', 'Name 2', 'Name 1', 'Name 2','Name 1', 'Name 2', 'Name 1', 'Name 2', 'Name 1', 'Name 2', 'Name 1', 'Name 2',
+]
 
 
 def create_random_things():
@@ -12,7 +17,7 @@ def create_random_things():
 
 
 def create_random_persons():
-    names = [f"Person {i+1}" for i in range(20)]
+    names = [f"Person {i+1}" for i in range(20)]  # Нормальные имена
     random.shuffle(names)
     persons = []
     for i in range(10):
